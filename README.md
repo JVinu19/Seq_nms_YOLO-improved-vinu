@@ -11,7 +11,9 @@
 This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) and **seq-nms**([reference](https://arxiv.org/abs/1602.08465)) to realise **real time video detection**.
 
 ## Steps
-
+1. Una vez descargado el código, deberás crear un entorno virtual con python 3.6. Para ello deberás irte al directorio /opt/anaconda3.7 y ejecutar:
+`conda create --name envname python=3.6`
+`conda activate envname`
 1. `make` the project;
 1. Download `yolo.weights` and `tiny-yolo.weights` by running `wget https://pjreddie.com/media/files/yolo.weights` and `wget https://pjreddie.com/media/files/tiny-yolo-voc.weights`;
 1. Copy a video file to the video folder, for example, `input.mp4`;
