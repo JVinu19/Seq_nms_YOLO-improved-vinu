@@ -12,9 +12,23 @@ This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) 
 
 ## Steps
 1. Una vez descargado el código, deberás crear un entorno virtual con python 3.6. Para ello deberás irte al directorio /opt/anaconda3.7 y ejecutar:
-`conda create --name envname python=3.6`
-`conda activate envname`
+`conda create --name envname python=3.6`;
+`conda activate envname`;
+
+1. Vamos a ir al archivo MakeFile, dentro de la carpeta seq\_yolo\_nms decargada y vamos a descativar los flags de OPENCV y CUDDN poniendo a '0' estas variables. A continuación, en el mismo MakeFile,  debemos cambiar las rutas `COMMON+= -DGPU -I/usr/local/cuda-8.0/include/` y `LDFLAGS+= -L/usr/local/cuda-8.0/lib64 -lcuda -lcudart -lcublas –lcurand`  por  `COMMON+= -DGPU -I/usr/local/cuda-10.1/include/`  y `LDFLAGS+= -L/usr/local/cuda-10.1/lib64 -lcuda -lcudart -lcublas –lcurand.`;
+
+1. A continuación introduces por terminal: `export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}` 
+
 1. `make` the project;
+
+1. Descargamos los pesos para los modelos intruduciendo los siguientes comandos: `wget https://pjreddie.com/media/files/yolo.weights` y `wget https://pjreddie.com/media/files/yolov2-tiny-voc.weights`
+
+1. 
+
+
+
+
+
 1. Download `yolo.weights` and `tiny-yolo.weights` by running `wget https://pjreddie.com/media/files/yolo.weights` and `wget https://pjreddie.com/media/files/tiny-yolo-voc.weights`;
 1. Copy a video file to the video folder, for example, `input.mp4`;
 1. In the video folder, run `python video2img.py -i input.mp4` and then `python get_pkllist.py`;
