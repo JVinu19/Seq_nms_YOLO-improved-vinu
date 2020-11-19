@@ -66,7 +66,7 @@ This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) 
 
 1. Para reconstruir el vídeo te vas a la carpeta de video y ejecutas:  `python img2video.py -i output`. Esto te va a generar un vídeo con nombre `output.mp4` en la carpeta de video. 
 
-# NOTA:\
+# Nota
 Todas estas instrucciones estan hechas para ser realizadas en un ordenador del laboratorio 16 de la EPS-UAM.
 
 
