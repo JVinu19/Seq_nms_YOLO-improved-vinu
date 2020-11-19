@@ -11,9 +11,9 @@
 This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) and **seq-nms**([reference](https://arxiv.org/abs/1602.08465)) to realise **real time video detection**.
 
 ## Steps
-1. Una vez descargado el código, deberás crear un entorno virtual con python 3.6. Para ello deberás irte al directorio /opt/anaconda3.7 y ejecutar:
-`conda create --name envname python=3.6`;
-`conda activate envname`;
+1. Una vez descargado el código, deberás crear un entorno virtual con python 3.6. Para ello deberás irte al directorio /opt/anaconda3.7 y ejecutar: \n
+`conda create --name envname python=3.6`\n
+`conda activate envname`
 
 1. Vamos a ir al archivo MakeFile, dentro de la carpeta seq\_yolo\_nms decargada y vamos a descativar los flags de OPENCV y CUDDN poniendo a '0' estas variables. A continuación, en el mismo MakeFile,  debemos cambiar las rutas `COMMON+= -DGPU -I/usr/local/cuda-8.0/include/` y `LDFLAGS+= -L/usr/local/cuda-8.0/lib64 -lcuda -lcudart -lcublas –lcurand`  por  `COMMON+= -DGPU -I/usr/local/cuda-10.1/include/`  y `LDFLAGS+= -L/usr/local/cuda-10.1/lib64 -lcuda -lcudart -lcublas –lcurand.`;
 
