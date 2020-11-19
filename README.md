@@ -64,21 +64,9 @@ This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) 
 -Poner los paréntesis a los print de las líneas: 6, 13 y 30;
 -Sustituir la línea 43 `if box[0]==cls` por `if box[0]==cls.encode('utf8')`;
 
-1.Para reconstruir el vídeo te vas a la carpeta de video y ejecutas:  `python img2video.py -i output`. Esto te va a generar un vídeo con nombre `output.mp4` en la carpeta de video. 
+1. Para reconstruir el vídeo te vas a la carpeta de video y ejecutas:  `python img2video.py -i output`. Esto te va a generar un vídeo con nombre `output.mp4` en la carpeta de video. 
 
 
-
-
-
-
-
-1. Download `yolo.weights` and `tiny-yolo.weights` by running `wget https://pjreddie.com/media/files/yolo.weights` and `wget https://pjreddie.com/media/files/tiny-yolo-voc.weights`;
-1. Copy a video file to the video folder, for example, `input.mp4`;
-1. In the video folder, run `python video2img.py -i input.mp4` and then `python get_pkllist.py`;
-1. Return to root floder and run `python yolo_seqnms.py` to generate output images in `video/output`;
-1. If you want to reconstruct a video from these output images, you can go to the video folder and run `python img2video.py -i output`
-
-And you will see detection results in `video/output`
 
 ## Reference
 
